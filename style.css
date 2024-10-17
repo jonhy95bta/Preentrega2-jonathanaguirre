@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+}
+body {
+    background-color: rgb(8, 1, 8)
+}
+
+input::placeholder,
+textarea::placeholder {
+
+    color: rgb(33, 29, 29);
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.formula {
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: .625rem;
+
+}
+
+label {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.625rem;
+}
+
+input, button {
+
+    padding: 0.625rem 0.625rem;
+    border-radius: 1.875rem;
+    margin-bottom: 0.625rem;
+    background-color: #E57A7A;
+    border: 2px solid to right, #f0716a, #750904;
+    color: black;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgb(33, 29, 29);
+}

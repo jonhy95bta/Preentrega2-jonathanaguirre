@@ -29,3 +29,5 @@ let boton = document.getElementById("boton").onclick = function () {
     window.location = "./page/autos.html";
 }
 
+
+

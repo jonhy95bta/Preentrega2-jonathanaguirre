@@ -92,3 +92,25 @@ header div p {
     color: black;
     outline: none;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding-top: 2rem;
+    background-color: white;
+    border-radius: 15%;
+    width: 40%;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+}

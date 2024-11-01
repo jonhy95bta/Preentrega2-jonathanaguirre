@@ -62,6 +62,7 @@ input::placeholder {
     flex-direction: row;
     gap: 1rem;
     margin: 1rem;
+    justify-content: center;
 
 }
 
@@ -76,7 +77,7 @@ input::placeholder {
 header div{
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     gap: 1rem;
     margin: 2rem;
 

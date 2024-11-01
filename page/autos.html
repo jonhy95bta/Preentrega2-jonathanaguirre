@@ -20,8 +20,14 @@
         <header id="encabezado">
             <template>
                 <div>
+
+                    <button onclick="Iniciarsesion()">Iniciar Sesion</button>
+                </div>
+            </template>
+            <template>
+                <div>
                     <p>Administrador</p>
-                    <button onclick ="cerrarsesion()">Cerrar Sesion</button>
+                    <button onclick="cerrarsesion()">Cerrar Sesion</button>
                 </div>
             </template>
         </header>
@@ -37,12 +43,25 @@
                         <p class="card-text">Modelo: </p>
                         <p class="card-text">Kms: </p>
                         <p class="card-text">Combustible: </p>
-                        <a href="#" class="btn btn-primary">Señar</a>
+                        <button id="Seña" class="btn btn-primary">Señar</button>
                     </div>
                 </div>
             </template>
         </div>
-
+        <!-- <div id="agregar">
+            <template>
+                <form id="autoForm">
+                    <input type="text" id="marca" placeholder="Marca" required>
+                    <input type="text" id="modelo" placeholder="Modelo" required>
+                    <input type="number" id="precio" placeholder="Precio" required>
+                    <input type="number" id="año" placeholder="Año" required>
+                    <input type="number" id="kms" placeholder="Kilometraje" required>
+                    <input type="text" id="combustible" placeholder="Combustible" required>
+                    <input type="text" id="imagen" placeholder="URL Imagen" required>
+                    <button type="submit">Agregar Auto</button>
+                </form>
+            </template>
+        </div> -->
     </main>
     <script src="../autos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

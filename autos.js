@@ -6,6 +6,11 @@ let administrador = localStorage.getItem("usuario");
 
 let loguinsesion = document.querySelector("#encabezado");
 
+
+
+// let agregarauto = document.querySelector("#agregar")
+
+
 class Auto {
     constructor(marca, modelo, precio, año, kms, combustible, imagen) {
         this.marca = marca;
@@ -27,16 +32,24 @@ let autos = [
 
 if (administrador === "Administrador") {
 
-    let sesion = document.querySelectorAll("template")[0].content.cloneNode(true)
+    let sesion = document.querySelectorAll("template")[1].content.cloneNode(true);
+
 
     loguinsesion.appendChild(sesion);
 
-    
+
+    // let agregar = document.querySelectorAll("template")[2].content.cloneNode(true);
+
+    // agregarauto.appendChild (agregar);
+
+} else {
+    let inicio = document.querySelectorAll("template")[0].content.cloneNode(true);
+    loguinsesion.appendChild(inicio)
 }
 
 
 autos.forEach((auto) => {
-    let clon = document.querySelectorAll('template')[1].content.cloneNode(true);
+    let clon = document.querySelectorAll('template')[2].content.cloneNode(true);
 
 
     clon.querySelector('img').src = auto.imagen;
@@ -51,9 +64,50 @@ autos.forEach((auto) => {
     clon.querySelectorAll('p')[4].innerText = "Combustible: " + auto.combustible;
 
     container_card.appendChild(clon);
+
+
 });
+
 
 function cerrarsesion() {
     localStorage.removeItem("usuario");
-    window.location = "autos.html"
+    window.location = "./autos.html"
 }
+function Iniciarsesion() {
+    
+    window.location = "../index.html"
+}
+
+// document.getElementById('autoForm').addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     let marca = document.getElementById('marca').value;
+//     let modelo = document.getElementById('modelo').value;
+//     let precio = document.getElementById('precio').value;
+//     let año = document.getElementById('año').value;
+//     let kms = document.getElementById('kms').value;
+//     let combustible = document.getElementById('combustible').value;
+//     let imagen = document.getElementById('imagen').value;
+
+//     let clon = document.querySelectorAll('template')[1].content.cloneNode(true);
+
+//     clon.querySelector('img').src = imagen;
+//     clon.querySelector('img').alt = `Imagen de ${marca} ${modelo}`;
+
+
+//     clon.querySelector('h5').innerText = marca;
+//     clon.querySelectorAll('p')[0].innerText = "Precio: " + precio;
+//     clon.querySelectorAll('p')[1].innerText = "Año: " + año;
+//     clon.querySelectorAll('p')[2].innerText = "Modelo: " + modelo;
+//     clon.querySelectorAll('p')[3].innerText = "Kms: " + kms;
+//     clon.querySelectorAll('p')[4].innerText = "Combustible: " + combustible;
+
+//     container_card.appendChild(clon);
+
+    
+//     document.getElementById('autoForm').reset();
+// });
+
+
+
+

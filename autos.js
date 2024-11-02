@@ -64,7 +64,7 @@ function guardarAutosEnLocalStorage() {
 
 function renderizarAutos() {
     container_card.innerHTML = "";
-    autos.forEach((auto,index) => {
+    autos.forEach((auto, index) => {
         let clon = templateAuto.content.cloneNode(true);
 
         clon.querySelector('img').src = auto.imagen;
@@ -76,13 +76,34 @@ function renderizarAutos() {
         clon.querySelectorAll('p')[3].innerText = "Kms: " + auto.kms;
         clon.querySelectorAll('p')[4].innerText = "Combustible: " + auto.combustible;
 
-        
+        let btnSeña = clon.querySelector("#Seña");
+        btnSeña.onclick = function () {
+            Swal.fire({
+                title: "Desea Señar?",
+                text: "Realizar una seña es un compromiso, no comprometa al personal",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Si, Señar!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    eliminarAuto(index),
+                        Swal.fire({
+                            title: "Señado",
+                            text: "Haz realizado la Seña",
+                            icon: "success"
+                        });
+                }
+            });
+        };
+
         if (administrador === "Administrador") {
             let btnEliminar = clon.querySelector(".btn-eliminar");
-            btnEliminar.style.display = "inline-block";  
+            btnEliminar.style.display = "inline-block";
             btnEliminar.addEventListener("click", () => eliminarAuto(index));
         } else {
-            
+
             clon.querySelector(".btn-eliminar").style.display = "none";
         }
 
@@ -94,9 +115,9 @@ renderizarAutos();
 
 function eliminarAuto(index) {
     if (administrador === "Administrador") {
-        autos.splice(index, 1); 
-        guardarAutosEnLocalStorage(); 
-        renderizarAutos(); 
+        autos.splice(index, 1);
+        guardarAutosEnLocalStorage();
+        renderizarAutos();
     }
 }
 
@@ -121,3 +142,5 @@ document.getElementById('autoForm')?.addEventListener('submit', function (event)
 
     document.getElementById('autoForm').reset();
 });
+
+

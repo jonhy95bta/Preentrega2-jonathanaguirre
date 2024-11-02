@@ -88,12 +88,13 @@ function renderizarAutos() {
                 confirmButtonText: "Si, Señar!"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    eliminarAuto(index),
+                    // eliminarAuto(index),
                         Swal.fire({
                             title: "Señado",
                             text: "Haz realizado la Seña",
-                            icon: "success"
+                            icon: "success",
                         });
+                        window.open("./senia.html", "_blank");
                 }
             });
         };

@@ -108,9 +108,30 @@ form {
 h3 {
     text-align: center;
     color: white;
+    padding-top: 2rem;
+    font-size: larger;
 }
 
 .formulario {
     display: flex;
     justify-content: center;
+}
+
+.senia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    width: 37.5rem;
+    height: 500px;
+    gap: 32px;
+    border-radius: 10%;
+    
+}
+.main {
+display: flex;
+justify-content: center;
+gap: 32px;
+padding-top: 3rem;
 }

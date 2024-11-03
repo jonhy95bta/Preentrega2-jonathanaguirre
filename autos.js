@@ -88,7 +88,7 @@ function renderizarAutos() {
                 confirmButtonText: "Si, Señar!"
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // eliminarAuto(index),
+                    localStorage.setItem('autoSeñado', JSON.stringify(auto))
                         Swal.fire({
                             title: "Señado",
                             text: "Haz realizado la Seña",

@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Señas</title>
+    <link rel="stylesheet" href="path/to/bootstrap.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <link rel="stylesheet" href="../style.css">
+
 </head>
+
 <body>
 
-    
-<h1>SEÑAS</h1>
 
-<template id="templateAuto">
-    <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Precio: $</p>
-            <p class="card-text">Año: </p>
-            <p class="card-text">Modelo: </p>
-            <p class="card-text">Kms: </p>
-            <p class="card-text">Combustible: </p>
-            <button id="Seña" class="btn btn-primary">Señar</button>
-            <button class="btn btn-danger btn-eliminar">Eliminar</button>
+    <h3>Confirmación de Seña</h2>
+    <main class="main">
+
+
+        <div class="senia">
+            
+            <div id="contenedorSeña"></div>
+            <template id="templateAutoSeña">
+                <div class="card" style="width: 18rem;">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Precio: $</p>
+                        <p class="card-text">Año: </p>
+                        <p class="card-text">Modelo: </p>
+                        <p class="card-text">Kms: </p>
+                        <p class="card-text">Combustible: </p>
+                        <button class="btn btn-danger" id="confirmarSeña">Confirmar Seña</button>
+                    </div>
+                </div>
+            </template>
         </div>
-    </div>
-</template>
+    </main>
 
 
 
 
-<script src="../senia.js"></script>
+    <script src="../senia.js"></script>
 </body>
+
 </html>

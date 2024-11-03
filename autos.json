@@ -1,0 +1,22 @@
+[
+    {
+        "marca": "Ford",
+        "modelo": "Fiesta",
+        "precio": 11000,
+        "año": 2020,
+        "kms": 120000,
+        "combustible": "Nafta",
+        "imagen": "../images/ford_fiesta.jpg",
+        "señado": false
+    },
+    {
+        "marca": "Volkswagen",
+        "modelo": "Polo",
+        "precio": 14000,
+        "año": 2024,
+        "kms": 120000,
+        "combustible": "Nafta",
+        "imagen": "../images/vw_polo.jpg",
+        "señado": false
+    }
+]
